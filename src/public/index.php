@@ -17,6 +17,12 @@ if (false !== $pos = strpos($uri, '?')) {
 }
 $uri = rawurldecode($uri);
 
+
+\App\Helpers\ViewHelper::setViewsDir( __DIR__ . "/../assets/views");
+\App\Helpers\ViewHelper::setCacheDir( __DIR__ . "/../cache");
+\App\Helpers\ViewHelper::setMode( \eftec\bladeone\BladeOne::MODE_DEBUG);
+
+
 $routeInfo = $dispatcher->dispatch($httpMethod, $uri);
 switch ($routeInfo[0]) {
     case FastRoute\Dispatcher::NOT_FOUND:

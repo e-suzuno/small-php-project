@@ -2,12 +2,16 @@
 
 namespace App\Controllers;
 
-class IndexController{
+use App\Helpers\ViewHelper;
+
+class IndexController
+{
     public function __construct()
     {
     }
+
     public function __invoke()
     {
-        return "IndexControllerですよ";
+        return ViewHelper::render("index", ["message" => "IndexControllerですよ"]);
     }
 }
