@@ -21,6 +21,8 @@ RUN usermod -u 1000 www-data -s /bin/bash && groupmod -g 1000 www-data
 COPY --from=composer:2.1 /usr/bin/composer /usr/bin/composer
 
 
+COPY 000-default.conf /etc/apache2/sites-available/000-default.conf
+
 WORKDIR /var/www/html
 
 EXPOSE 80
