@@ -1,0 +1,9 @@
+{
+  "name": "e-suzuno/small-php-project",
+  "description": "description",
+  "authors": [
+  ],
+  "require": {
+    "nikic/fast-route": "^1.3"
+  }
+}
